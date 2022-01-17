@@ -37,7 +37,6 @@ def create_message(clients: List[dict]) -> str:
             client_info.append(str(client))
     if total_offline_message >= Config.offline_messages:
         message = "```{}\ntotal: {}```".format("\n".join(client_info), total_offline_message)
-    print(message)
     return message
 
 
@@ -49,7 +48,7 @@ def main():
 
 
 if __name__ == "__main__":
-    schedule.every(5).seconds.do(main)
+    schedule.every(5).minutes.do(main)
     while True:
         schedule.run_pending()
         time.sleep(1)
