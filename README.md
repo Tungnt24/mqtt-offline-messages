@@ -1,4 +1,4 @@
 # mqtt-offline-messages
 script check mqtt offline messages
 ## Run
-```python run.py```
+```python mqtt_offline_messages/run.py```
